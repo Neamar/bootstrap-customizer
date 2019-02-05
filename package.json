@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "scss-powertools --production scss/test.scss compiled.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/Neamar/bootstrap-customizer/issues"
   },
-  "homepage": "https://github.com/Neamar/bootstrap-customizer#readme"
+  "homepage": "https://github.com/Neamar/bootstrap-customizer#readme",
+  "dependencies": {
+    "bootstrap": "^4.2.1"
+  },
+  "devDependencies": {
+    "scss-powertools": "^1.0.1"
+  }
 }
