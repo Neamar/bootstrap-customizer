@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "scss-powertools scss/test.scss compiled.css",
-    "prefix": "postcss compiled.css --use autoprefixer -d compiled-prefix.css",
+    "build": "npm run scss && npm run prefix && npm run minify",
+    "scss": "scss-powertools scss/test.scss dist/compiled.css",
+    "prefix": "postcss dist/compiled.css --use autoprefixer -o dist/compiled-prefixed.css",
+    "minify": "cleancss --level 1 --format breaksWith=lf --output dist/out.min.css dist/compiled-prefixed.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,6 +23,7 @@
   "dependencies": {
     "autoprefixer": "^9.4.7",
     "bootstrap": "^4.2.1",
+    "clean-css-cli": "^4.2.1",
     "postcss-cli": "^6.1.1"
   },
   "devDependencies": {
