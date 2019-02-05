@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "scss-powertools scss/test.scss compiled.css",
+    "prefix": "postcss compiled.css --use autoprefixer -d compiled-prefix.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,7 +19,9 @@
   },
   "homepage": "https://github.com/Neamar/bootstrap-customizer#readme",
   "dependencies": {
-    "bootstrap": "^4.2.1"
+    "autoprefixer": "^9.4.7",
+    "bootstrap": "^4.2.1",
+    "postcss-cli": "^6.1.1"
   },
   "devDependencies": {
     "scss-powertools": "^1.0.1"
